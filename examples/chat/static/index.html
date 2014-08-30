@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ChatApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Chat</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/app.css"/>
+    <script type="text/javascript" src="/static/app.js"></script>
+  </head>
+  <body ng-cloak ng-controller="ChatController">
+    <div class="room-div">
+      <input ng-model="roomName">
+      <button ng-click="connectToRoom(roomName)">Connect To Room!</button>
+    </div>
+    <div class="lines">
+      <div ng-repeat="line in chatLines track by $index" class="line">{{line}}</div>
+    </div>
+    <div class="input-div form-group">
+      <input type="text" ng-model="inputLine">
+      <button ng-click="websocket.sendMessage(inputLine)" class="btn btn-primary">Send</button>
+    </div>
+  </body>
+</html>

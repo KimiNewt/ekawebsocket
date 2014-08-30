@@ -1,0 +1,8 @@
+.lines {
+  height: 100px;
+  overflow-y: scroll;
+}
+.lines .line {
+  background: #008080;
+  margin: 1px;
+}
