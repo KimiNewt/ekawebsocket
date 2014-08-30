@@ -1,0 +1,2 @@
+class NonExistantRoomException(Exception):
+    pass
