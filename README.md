@@ -22,3 +22,7 @@ How to use
 To use, you must subclass EkaWebsocket and implement the *handle_message* method. 
 The method gets a message type and the message data.
 
+Relevant methods:
+  * *send_message* - to send a message to the current client.
+  * *broadcast_to_client_rooms* - send a message to all the rooms the current client is in.
+  * *broadcast_to_room* - (classmethod, can be called outside without any reference to a client) send a message to all clients in a given room.
